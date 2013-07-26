@@ -23,7 +23,7 @@ $PluginInfo["Vanoogle"] = array(
 	"AuthorEmail" => "ddumont@gmail.com",
 	"SettingsUrl" => "/dashboard/settings/vanoogle",
 	"SettingsPermission" => "Garden.Settings.Manage",
-	"AuthorUrl" => "http://blog.canofsleep.com",
+	"AuthorUrl" => "https://github.com/ddumont/vanoogle",
 	"RequiredApplications" => array("Vanilla" => "2.0.18") // This needs to be bumped when Vanilla releases with my contributed changes
 );
 
