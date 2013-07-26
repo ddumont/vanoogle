@@ -43,6 +43,12 @@
             <resource>
               <directory>src/main/php</directory>
             </resource>
+            <resource>
+              <directory>${basedir}</directory>
+              <includes>
+                <include>LICENSE</include>
+              </includes>
+            </resource>
           </resources>              
         </configuration>
         <executions>
