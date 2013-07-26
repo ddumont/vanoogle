@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.canofsleep.vanilla</groupId>
+  <artifactId>vanoogle</artifactId>
+  <version>1.4.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>vanoogle-plugin</name>
+  <description>Google search plugin for Vanilla 2+ forums</description>
+  <scm>
+  	<url>https://github.com/ddumont/vanoogle</url>
+  </scm>
+  <issueManagement>
+  	<system>github</system>
+  	<url>https://github.com/ddumont/vanoogle</url>
+  </issueManagement>
+  
+  <build>
+    <plugins>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+          <outputDirectory>${project.build.directory}/Vanoogle</outputDirectory>
+          <resources>  
+            <resource>
+              <directory>src/main/php</directory>
+            </resource>
+          </resources>              
+        </configuration>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      
+      <plugin>
+        <groupId>com.samaxes.maven</groupId>
+        <artifactId>minify-maven-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+            <execution>
+                <id>default-minify</id>
+                <phase>process-resources</phase>
+                <configuration>
+                    <charset>utf-8</charset>
+                    <jsEngine>closure</jsEngine>
+                    <cssSourceDir>../resources</cssSourceDir>
+                    <cssSourceFiles>
+                        <cssSourceFile>vanoogle.css</cssSourceFile>
+                    </cssSourceFiles>
+                    <nosuffix>true</nosuffix>
+                    <cssTargetDir>../Vanoogle/design</cssTargetDir>
+                    <cssFinalFile>vanoogle.css</cssFinalFile>
+                    
+                    <jsSourceDir>../javascript</jsSourceDir>
+                    <jsSourceFiles>
+                        <jsSourceFile>vanoogle.js</jsSourceFile>
+                    </jsSourceFiles>
+                    <jsTargetDir>../Vanoogle/js</jsTargetDir>
+                    <jsFinalFile>vanoogle.js</jsFinalFile>
+                </configuration>
+                <goals>
+                    <goal>minify</goal>
+                </goals>
+            </execution>
+        </executions>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+           <finalName>${project.name}-${project.version}</finalName>
+           <appendAssemblyId>false</appendAssemblyId>
+           <archiveBaseDirectory>${project.build.directory}</archiveBaseDirectory>
+           <descriptors>
+            <descriptor>src/main/assembly/vanoogle.xml</descriptor>
+          </descriptors>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+        
+    </plugins>
+  </build>
+</project>
