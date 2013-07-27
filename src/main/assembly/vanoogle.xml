@@ -21,7 +21,7 @@
   <includeBaseDirectory>false</includeBaseDirectory>
   <fileSets>
     <fileSet>
-      <directory>Vanoogle</directory>
+      <directory>${project.plugin.name}</directory>
       <includes>
         <include>**</include>
       </includes>

@@ -16,14 +16,14 @@
  */
 
 $PluginInfo["Vanoogle"] = array(
-	"Name" => "Vanoogle",
-	"Description" => "A google search plugin for vanilla 2+",
-	"Version" => "1.4",
-	"Author" => "Dan Dumont",
-	"AuthorEmail" => "ddumont@gmail.com",
+	"Name" => "${project.plugin.name}",
+	"Description" => "${project.description}",
+	"Version" => "${project.version}",
+	"Author" => "${project.author.name}",
+	"AuthorEmail" => "${project.author.email}",
+	"AuthorUrl" => "${project.url}",
 	"SettingsUrl" => "/dashboard/settings/vanoogle",
 	"SettingsPermission" => "Garden.Settings.Manage",
-	"AuthorUrl" => "https://github.com/ddumont/vanoogle",
 	"RequiredApplications" => array("Vanilla" => "2.0.18") // This needs to be bumped when Vanilla releases with my contributed changes
 );
 
