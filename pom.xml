@@ -24,6 +24,8 @@
   <url>https://github.com/ddumont/vanoogle</url>
   <scm>
   	<url>https://github.com/ddumont/vanoogle</url>
+  	<developerConnection>scm:git:https://github.com/ddumont/vanoogle.git</developerConnection>
+  	<tag>HEAD</tag>
   </scm>
   <issueManagement>
   	<system>github</system>
