@@ -17,7 +17,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.canofsleep.vanilla</groupId>
   <artifactId>vanoogle</artifactId>
-  <version>1.4.1</version>
+  <version>1.4.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>vanoogle-plugin</name>
   <description>A google search plugin for Vanilla 2+ (http://vanillaforums.org)</description>
