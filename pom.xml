@@ -20,7 +20,7 @@
   <version>1.4.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>vanoogle-plugin</name>
-  <description>Google search plugin for Vanilla 2+ forums</description>
+  <description>A google search plugin for Vanilla 2+ (http://vanillaforums.org)</description>
   <url>https://github.com/ddumont/vanoogle</url>
   <scm>
   	<url>https://github.com/ddumont/vanoogle</url>
